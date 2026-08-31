@@ -15,7 +15,11 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
   };
 
   useEffect(() => {
-    // 3. Memperbaiki logika scroll dan menambahkan cleanup function
+    // PERBAIKAN UTAMA: Cek posisi scroll saat web pertama kali dimuat/di-refresh
+    if (typeof window !== "undefined" && window.scrollY > 50) {
+      setIsScroll(true);
+    }
+
     const handleScroll = () => {
       if (window.scrollY > 50) {
         setIsScroll(true);
@@ -25,7 +29,7 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
     };
 
     window.addEventListener("scroll", handleScroll);
-    
+
     // Cleanup function untuk mencegah memory leak
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -36,19 +40,17 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
         <Image src={assets.header_bg_color} alt="" className="w-full" />
       </div>
       <nav
-        // 2. Menghapus bg-opacity-50 yang redundant
         className={`w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50 ${isScroll ? "bg-white/50 backdrop-blur-lg shadow-sm dark:bg-darkTheme dark:shadow-white/20" : ""}`}
       >
         <a href="#top">
           <Image
-            src={isDarkMode ? assets.logo_dark: assets.logo}
+            src={isDarkMode ? assets.logo_dark : assets.logo}
             alt="Logo"
             className="w-28 cursor-pointer mr-14"
           />
         </a>
 
         <ul
-          // 1. Menambahkan dark:text-white agar teks menu desktop terlihat di mode gelap
           className={`hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 ${isScroll ? "" : "bg-white/50 shadow-sm dark:border dark:border-white/50 dark:bg-transparent"} dark:text-white`}
         >
           <li>
@@ -80,19 +82,30 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
 
         <div className="flex items-center gap-4">
           <button onClick={() => setIsDarkMode((prev) => !prev)}>
-            <Image src={isDarkMode ? assets.sun_icon : assets.moon_icon} alt="Toggle Theme" className="w-6" />
+            <Image
+              src={isDarkMode ? assets.sun_icon : assets.moon_icon}
+              alt="Toggle Theme"
+              className="w-6"
+            />
           </button>
           <a
             href="#contact"
-            // 1. Menambahkan dark:text-white di tombol Contact
             className="hidden lg:flex items-center gap-3 px-10 py-2.5 border border-gray-500 rounded-full ml-4 font-ovo dark:border-white/50 dark:text-white"
           >
             Contact{" "}
-            <Image src={isDarkMode ? assets.arrow_icon_dark : assets.arrow_icon} alt="Arrow" className="w-3" />
+            <Image
+              src={isDarkMode ? assets.arrow_icon_dark : assets.arrow_icon}
+              alt="Arrow"
+              className="w-3"
+            />
           </a>
 
           <button className="block md:hidden ml-3" onClick={openMenu}>
-            <Image src={isDarkMode ? assets.menu_white : assets.menu_black} alt="Menu" className="w-6" />
+            <Image
+              src={isDarkMode ? assets.menu_white : assets.menu_black}
+              alt="Menu"
+              className="w-6"
+            />
           </button>
         </div>
 
