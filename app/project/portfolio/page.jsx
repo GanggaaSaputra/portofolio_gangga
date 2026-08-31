@@ -4,19 +4,14 @@ import Link from "next/link";
 import Image from "next/image";
 import { motion } from "motion/react";
 
-export default function SalesForecastDetail() {
+export default function PortfolioDetail() {
   // 1. Siapkan Array berisi daftar gambar lu di sini
-  // Pastikan nama file ini sesuai dengan yang ada di folder public lu
+  // Saran: Ambil screenshot web portofolio lu yang udah jadi (Home, About, Services, dll)
   const images = [
-    "/forecast-1.png",
-    "/forecast-2.png",
-    "/forecast-3.png",
-    "/forecast-4.png",
-    "/forecast-5.png",
-    "/forecast-6.png",
-    "/forecast-7.png",
-    "/forecast-8.png",
-    "/forecast-9.png",
+    "/portfolio-1.png",
+    "/portfolio-2.png",
+    "/portfolio-3.png",
+    "/portfolio-4.png",
   ];
 
   // 2. State untuk melacak gambar yang sedang aktif
@@ -59,7 +54,7 @@ export default function SalesForecastDetail() {
         transition={{ duration: 0.5, delay: 0.2 }}
         className="text-4xl md:text-5xl font-ovo mb-6 text-center"
       >
-        Laptop Sales Forecasting System
+        Modern Web Developer Portfolio
       </motion.h1>
 
       <motion.p
@@ -68,10 +63,9 @@ export default function SalesForecastDetail() {
         transition={{ duration: 0.5, delay: 0.3 }}
         className="text-lg text-gray-700 dark:text-white/80 max-w-3xl mx-auto leading-relaxed mb-10 font-ovo text-center"
       >
-        A full-stack web application designed to predict future laptop sales
-        accurately using the Triple Exponential Smoothing method. Built to
-        process monthly historical sales data and provide actionable business
-        insights.
+        A highly interactive and responsive personal portfolio website built to
+        showcase my skills in modern web development, featuring seamless
+        animations, dark mode persistence, and direct contact integration.
       </motion.p>
 
       {/* Fitur Image Slider (Geser Gambar) */}
@@ -91,7 +85,7 @@ export default function SalesForecastDetail() {
         >
           <Image
             src={images[currentIndex]}
-            alt={`Sales Forecasting System Screenshot ${currentIndex + 1}`}
+            alt={`Portfolio Screenshot ${currentIndex + 1}`}
             fill
             className="object-cover"
           />
@@ -143,12 +137,13 @@ export default function SalesForecastDetail() {
               Project Overview
             </h2>
             <p className="text-gray-700 dark:text-white/80 mb-6 leading-relaxed">
-              This system was developed as a case study for Alibaba Original
-              Store to solve the challenge of inventory management. By utilizing
-              sales data from 2023 to 2025, the application calculates trends
-              and seasonality through the Triple Exponential Smoothing
-              algorithm, allowing the store to anticipate market demand and
-              optimize their laptop stock efficiently.
+              This portfolio was engineered to act as a digital resume and a
+              demonstration of my technical capabilities. By leveraging Next.js
+              (App Router) for optimal performance and SEO, combined with
+              Tailwind CSS and Framer Motion, the project delivers a fluid,
+              app-like user experience. It serves as a central hub for my
+              professional identity, detailing my academic background, technical
+              proficiencies, and recent case studies.
             </p>
 
             <h2 className="text-2xl font-semibold mb-4 border-b pb-2 dark:border-white/20 mt-10">
@@ -156,12 +151,24 @@ export default function SalesForecastDetail() {
             </h2>
             <ul className="list-disc list-inside text-gray-700 dark:text-white/80 space-y-3">
               <li>
-                Implementation of the Triple Exponential Smoothing algorithm for
-                accurate time-series forecasting.
+                Intelligent Dark/Light theme switching with state persistence
+                via local storage.
               </li>
-              <li>Dynamic processing of monthly sales data (2023–2025).</li>
-              <li>Interactive data visualization and reporting dashboards.</li>
-              <li>Secure backend architecture for database management.</li>
+              <li>
+                Smooth, component-level scroll and hover animations powered by
+                Framer Motion.
+              </li>
+              <li>
+                Fully functional and secure contact form integrated with the
+                Web3Forms API.
+              </li>
+              <li>
+                Fully responsive design, optimized for desktop, tablet, and
+                mobile viewing.
+              </li>
+              <li>
+                Automated CI/CD deployment pipeline utilizing Vercel and GitHub.
+              </li>
             </ul>
           </motion.div>
         </div>
@@ -178,35 +185,35 @@ export default function SalesForecastDetail() {
             <h3 className="text-xl font-semibold mb-4">Technologies Used</h3>
             <div className="flex flex-wrap gap-2 mb-8">
               <span className="px-3 py-1 bg-white dark:bg-black/50 border border-gray-300 dark:border-gray-600 rounded-full text-sm">
-                React
+                Next.js
               </span>
               <span className="px-3 py-1 bg-white dark:bg-black/50 border border-gray-300 dark:border-gray-600 rounded-full text-sm">
-                Node.js
+                Tailwind v4
               </span>
               <span className="px-3 py-1 bg-white dark:bg-black/50 border border-gray-300 dark:border-gray-600 rounded-full text-sm">
-                Express
+                Framer Motion
               </span>
               <span className="px-3 py-1 bg-white dark:bg-black/50 border border-gray-300 dark:border-gray-600 rounded-full text-sm">
-                MySQL
+                Web3Forms
               </span>
             </div>
 
             <h3 className="text-xl font-semibold mb-4">Project Details</h3>
             <ul className="space-y-3 text-sm text-gray-700 dark:text-white/80">
               <li>
-                <strong>Type:</strong> Academic Research Project
+                <strong>Type:</strong> Personal Branding Website
               </li>
               <li>
-                <strong>Client:</strong> Alibaba Original Store
+                <strong>Client:</strong> Independent Project
               </li>
               <li>
-                <strong>Role:</strong> Full-Stack Developer
+                <strong>Role:</strong> Frontend Developer / Designer
               </li>
             </ul>
 
             <div className="mt-8 pt-6 border-t border-gray-200 dark:border-white/10">
               <a
-                href="https://github.com/GanggaaSaputra/sistem-peramalan-penjualan-laptop"
+                href="https://github.com/GanggaaSaputra/portofolio_gangga"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center justify-center gap-2 w-full py-3 bg-black text-white rounded-full hover:bg-gray-800 transition dark:bg-white dark:text-black dark:hover:bg-gray-200"

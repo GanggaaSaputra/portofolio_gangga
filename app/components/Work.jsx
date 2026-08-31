@@ -25,7 +25,7 @@ const Work = ({ isDarkMode }) => {
         initial={{ y: -20, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ delay: 0.5, duration: 0.5 }}
-        className="text-center text-5xl font-outfit"
+        className="text-center text-5xl font-ovo"
       >
         My Latest Project
       </motion.h2>
