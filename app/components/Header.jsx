@@ -40,7 +40,7 @@ function Header() {
         // Mengubah huruf kapital dan font-ovo
         className="text-3xl sm:text-6xl lg:text-[66px] font-ovo"
       >
-        Web Developer Based in Indonesia
+        Web Developer Based in Gresik
       </motion.h1>
 
       <motion.p

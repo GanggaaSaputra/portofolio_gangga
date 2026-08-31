@@ -100,13 +100,14 @@ export const workData = [
     {
         title: 'Portfolio Project',
         description: 'Web Development',
-        bgImage: '/work-2.png',
+        bgImage: '/portfolio-1.png',
         link: '/project/portfolio'
     },
     {
         title: 'BEM Design Project',
         description: 'Graphics Design',
-        bgImage: '/work-3.png',
+        bgImage: '/design-1.png',
+        link: '/project/design'
     }
 ]
 
