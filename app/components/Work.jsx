@@ -36,9 +36,7 @@ const Work = ({ isDarkMode }) => {
         transition={{ duration: 0.5, delay: 0.7 }}
         className="text-center max-w-2xl mx-auto mt-5 mb-12 font-ovo"
       >
-        Welcome to my web development portfolio. Explore my latest full-stack
-        projects, including a web-based sales forecasting system utilizing
-        Triple Exponential Smoothing, built with React, Node.js, and MySQL.
+        Explore my latest multidisciplinary projects. This portfolio highlights my ability to bridge technical and creative domains.
       </motion.p>
 
       <motion.div

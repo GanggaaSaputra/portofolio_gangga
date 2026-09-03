@@ -40,7 +40,7 @@ function Header() {
         // Mengubah huruf kapital dan font-ovo
         className="text-3xl sm:text-6xl lg:text-[66px] font-ovo"
       >
-        Web Developer Based in Gresik
+        Web Development Based in Gresik
       </motion.h1>
 
       <motion.p
@@ -49,10 +49,8 @@ function Header() {
         transition={{ duration: 0.6, delay: 0.7 }}
         className="max-w-2xl mx-auto font-ovo"
       >
-        I am a web developer with a passion for creating beautiful and
-        functional modern websites. Specializing in React, Next.js, Node.js, and
-        MySQL, I am always exploring new technologies to build scalable
-        applications and improve my skills.
+        Informatics Engineering graduate bridging full-stack web development and
+        network engineering.
       </motion.p>
 
       <div className="flex flex-col sm:flex-row items-center gap-4 mt-4">

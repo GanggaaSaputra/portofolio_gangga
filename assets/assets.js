@@ -104,7 +104,7 @@ export const workData = [
         link: '/project/portfolio'
     },
     {
-        title: 'BEM Design Project',
+        title: 'KKN Logo Design Project',
         description: 'Graphics Design',
         bgImage: '/design-1.png',
         link: '/project/design'
