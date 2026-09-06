@@ -5,31 +5,28 @@ import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Navbar from "./components/Navbar";
-import Services from "./components/Services";
+import Certifications from "./components/Certifications";
+import Publication from "./components/Publication";
 import Work from "./components/Work";
 
 export default function Home() {
   const [isDarkMode, setIsDarkMode] = useState(false);
   // 1. Tambahkan state isMounted
-  const [isMounted, setIsMounted] = useState(false); 
+  const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
-    if (
-      localStorage.theme === "dark" ||
-      (!("theme" in localStorage) &&
-        window.matchMedia("(prefers-color-scheme: dark)").matches)
-    ) {
-      setIsDarkMode(true);
-    } else {
-      setIsDarkMode(false);
-    }
-    // 2. Tandai bahwa pengecekan memori awal sudah selesai
-    setIsMounted(true); 
+    const savedTheme = localStorage.theme;
+    const prefersDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+    window.requestAnimationFrame(() => {
+      setIsDarkMode(savedTheme === "dark" || (!savedTheme && prefersDarkMode));
+      setIsMounted(true);
+    });
   }, []);
 
   useEffect(() => {
     // 3. KUNCI UTAMA: Jangan lakukan apa-apa kalau komponen belum selesai load
-    if (!isMounted) return; 
+    if (!isMounted) return;
 
     if (isDarkMode) {
       document.documentElement.classList.add("dark");
@@ -45,7 +42,8 @@ export default function Home() {
       <Navbar isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
       <Header isDarkMode={isDarkMode} />
       <About isDarkMode={isDarkMode} />
-      <Services isDarkMode={isDarkMode} />
+      <Certifications isDarkMode={isDarkMode} />
+      <Publication />
       <Work isDarkMode={isDarkMode} />
       <Contact isDarkMode={isDarkMode} />
       <Footer isDarkMode={isDarkMode} />

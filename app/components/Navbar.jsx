@@ -15,19 +15,13 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
   };
 
   useEffect(() => {
-    // PERBAIKAN UTAMA: Cek posisi scroll saat web pertama kali dimuat/di-refresh
-    if (typeof window !== "undefined" && window.scrollY > 50) {
-      setIsScroll(true);
-    }
+    const updateScrollState = () => setIsScroll(window.scrollY > 50);
 
     const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setIsScroll(true);
-      } else {
-        setIsScroll(false);
-      }
+      updateScrollState();
     };
 
+    updateScrollState();
     window.addEventListener("scroll", handleScroll);
 
     // Cleanup function untuk mencegah memory leak
@@ -64,8 +58,13 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
             </a>
           </li>
           <li>
-            <a className="font-ovo" href="#services">
-              Services
+            <a className="font-ovo" href="#certifications">
+              Certifications
+            </a>
+          </li>
+          <li>
+            <a className="font-ovo" href="#publication">
+              Publication
             </a>
           </li>
           <li>
@@ -134,8 +133,13 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
             </a>
           </li>
           <li>
-            <a className="font-ovo" onClick={closeMenu} href="#services">
-              Services
+            <a className="font-ovo" onClick={closeMenu} href="#certifications">
+              Certifications
+            </a>
+          </li>
+          <li>
+            <a className="font-ovo" onClick={closeMenu} href="#publication">
+              Publication
             </a>
           </li>
           <li>

@@ -54,17 +54,16 @@ const About = ({ isDarkMode }) => {
           className="flex-1"
         >
           <p className="mb-10 max-w-2xl font-ovo">
-            Informatics Engineering graduate with hands-on experience in
-            full-stack web development and network engineering. Proficient in
-            building robust applications using Node.js, Express.js, React.js,
-            and MySQL, alongside a proven track record in designing data-driven
-            forecasting systems. During my networking internship, I gained
-            practical expertise in designing and simulating enterprise network
-            architectures, specifically implementing VLAN configurations for IP
-            Camera systems. Leveraging a background in IT sales consulting, I
-            combine a deep understanding of hardware requirements with a strong
-            passion for developing scalable software and modern IT
-            infrastructure.
+            Informatics Engineering graduate and passionate Software Engineer
+            with hands-on experience in full-stack web development and network
+            engineering. Proficient in building robust applications, alongside a
+            proven track record in designing data-driven forecasting systems.
+            During my networking internship, I gained practical expertise in
+            designing and simulating enterprise network architectures,
+            specifically implementing VLAN configurations for IP Camera systems.
+            Leveraging a background in IT sales consulting, I combine a deep
+            understanding of hardware requirements with a strong passion for
+            developing scalable software and modern IT infrastructure.
           </p>
 
           <motion.ul className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl">

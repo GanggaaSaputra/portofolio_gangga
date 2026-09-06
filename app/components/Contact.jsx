@@ -35,7 +35,7 @@ const Contact = () => {
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1 }}
       id="contact"
-      className="w-full px-[12%] py-10 scroll-mt-20 bg-[url('/footer-bg-color.png')] bg-no-repeat bg-center bg-[length:90%_auto] dark:bg-none"
+      className="w-full px-[12%] py-10 scroll-mt-20 bg-[url('/footer-bg-color.png')] bg-no-repeat bg-center bg-size-[90%_auto] dark:bg-none"
     >
       <motion.h4
         initial={{ y: -20, opacity: 0 }}
@@ -61,8 +61,8 @@ const Contact = () => {
         transition={{ duration: 0.5, delay: 0.7 }}
         className="text-center max-w-2xl mx-auto mt-5 mb-12 font-ovo"
       >
-        I'd love to hear from you! Whether you have a question, a project idea,
-        or just want to say hi, feel free to drop a message below. I'll get back
+        I&apos;d love to hear from you! Whether you have a question, a project idea,
+        or just want to say hi, feel free to drop a message below. I&apos;ll get back
         to you as soon as possible.
       </motion.p>
 

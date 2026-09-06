@@ -36,7 +36,8 @@ const Work = ({ isDarkMode }) => {
         transition={{ duration: 0.5, delay: 0.7 }}
         className="text-center max-w-2xl mx-auto mt-5 mb-12 font-ovo"
       >
-        Explore my latest multidisciplinary projects. This portfolio highlights my ability to bridge technical and creative domains.
+        Explore my latest multidisciplinary projects. This portfolio highlights
+        my ability to bridge technical and creative domainsÍ.
       </motion.p>
 
       <motion.div

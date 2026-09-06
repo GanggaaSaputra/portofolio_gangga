@@ -25,7 +25,7 @@ function Header() {
         // Mengubah font-Ovo menjadi font-ovo
         className="flex items-end gap-2 text-xl md:text-2xl mb-3 font-ovo"
       >
-        Hi, I'm Gangga Aditya Saputra{" "}
+        Hi, I&apos;m Gangga Aditya Saputra{" "}
         <Image
           src={assets.hand_icon}
           alt="Hand Wave"
@@ -40,7 +40,7 @@ function Header() {
         // Mengubah huruf kapital dan font-ovo
         className="text-3xl sm:text-6xl lg:text-[66px] font-ovo"
       >
-        Web Development Based in Gresik
+        Software Engineer Based in Gresik
       </motion.h1>
 
       <motion.p
@@ -49,7 +49,7 @@ function Header() {
         transition={{ duration: 0.6, delay: 0.7 }}
         className="max-w-2xl mx-auto font-ovo"
       >
-        Informatics Engineering graduate bridging full-stack web development and
+        Informatics Engineering graduate bridging software engineer and
         network engineering.
       </motion.p>
 

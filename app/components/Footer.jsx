@@ -47,7 +47,6 @@ const Footer = ({ isDarkMode }) => {
             </a>
           </li>
           <li>
-            {/* Link Instagram dibersihkan dari parameter tracking */}
             <a
               target="_blank"
               href="https://www.instagram.com/gnggsptr_/"
