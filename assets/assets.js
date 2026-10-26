@@ -114,13 +114,13 @@ export const workData = [
   {
     title: "Sales Forecasting Project",
     description: "Web Development",
-    bgImage: "/work-1.jpeg",
+    bgImage: "/work-1.png",
     link: "/project/sales-forecast",
   },
   {
     title: "Portfolio Project",
     description: "Web Development",
-    bgImage: "/portfolio-1.png",
+    bgImage: "/work-2.png",
     link: "/project/portfolio",
   },
   {

@@ -11,7 +11,6 @@ import Work from "./components/Work";
 
 export default function Home() {
   const [isDarkMode, setIsDarkMode] = useState(false);
-  // 1. Tambahkan state isMounted
   const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
@@ -25,7 +24,6 @@ export default function Home() {
   }, []);
 
   useEffect(() => {
-    // 3. KUNCI UTAMA: Jangan lakukan apa-apa kalau komponen belum selesai load
     if (!isMounted) return;
 
     if (isDarkMode) {
